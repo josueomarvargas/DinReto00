@@ -14,7 +14,7 @@ public class ViewFactory {
 
     public static View getView(String vType) {
         if (vType.equalsIgnoreCase("fx")) {
-            return (View) new ViewImplementationFX();
+            return new ViewImplementationFX();
         }else {
             return new ViewImplementationText();
         }
