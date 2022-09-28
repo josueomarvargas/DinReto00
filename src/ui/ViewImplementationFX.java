@@ -5,8 +5,10 @@
 package ui;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.Scene;  
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -14,33 +16,22 @@ import javafx.stage.Stage;
  * @author josue
  */
 public class ViewImplementationFX extends Application implements View {
-
-    private String saludo="";
-
+     
     @Override
     public void showGreeting(String text) {
-        saludo = text;
+        launch(text);
     }
 
     @Override
-
     public void start(Stage primaryStage) {
-
-        Button btn = new Button();
-        btn.setText(saludo);
-
-        Scene scene = new Scene(btn, 300, 250);
+        Text txt = new Text(getParameters().getRaw().get(0));
+        StackPane root = new StackPane();
+        root.getChildren().add(txt);
+        Scene scene = new Scene(root, 300, 250);
 
         primaryStage.setTitle("DIN");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }
