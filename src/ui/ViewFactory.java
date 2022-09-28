@@ -11,13 +11,15 @@ import java.util.ResourceBundle;
  * @author yeguo
  */
 public class ViewFactory {
-
+    
     public static View getView(String vType) {
         if (vType.equalsIgnoreCase("fx")) {
             return new ViewImplementationFX();
-        }else {
+        } else if (vType.equalsIgnoreCase("swing")) {
+            return new ViewImplementationJSwing();
+        } else {
             return new ViewImplementationText();
         }
     }
-
+    
 }

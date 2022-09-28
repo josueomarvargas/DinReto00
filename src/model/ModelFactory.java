@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
  * @author yeguo
  */
 public class ModelFactory {
+
      //private static final String MODEL_TYPE = ResourceBundle.getBundle("dinreto0.config").getString("model");
 
         public static Model getModel(String mType) {
