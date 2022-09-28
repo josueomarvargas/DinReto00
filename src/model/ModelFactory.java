@@ -11,12 +11,14 @@ import java.util.ResourceBundle;
  * @author yeguo
  */
 public class ModelFactory {
- 
-    
+
+     //private static final String MODEL_TYPE = ResourceBundle.getBundle("dinreto0.config").getString("model");
+
         public static Model getModel(String mType) {
         if (mType.equalsIgnoreCase("mysql")) {
             return new ModelImplementationBD();
         }else {
+           // System.out.println(MODEL_TYPE);
             return new ModelImplementationFile();
         }
     }
