@@ -10,9 +10,15 @@ import java.util.ResourceBundle;
  *
  * @author yeguo
  */
-public class ModelFactory {
+public class ModelFactory{
      //private static final String MODEL_TYPE = ResourceBundle.getBundle("dinreto0.config").getString("model");
 
+/**
+ * Selecciona si queremos mostrar por fichero o base de Datos
+ * 
+ * @param
+ * @return 
+ */
         public static Model getModel(String mType) {
         if (mType.equalsIgnoreCase("mysql")) {
             return new ModelImplementationBD();
@@ -21,6 +27,5 @@ public class ModelFactory {
             return new ModelImplementationFile();
         }
     }
-    
     
 }
