@@ -6,12 +6,14 @@ package ui;
 
 import java.util.logging.Level;
 
+
 /**
  * Clase que devuelve una clase que implementa la interfaz vista
  *
  * @author josue y henrique
  */
 public class ViewFactory {
+
 
     /**
      * Devuelve una vista dependiendo del valor que está en el archivo de
@@ -33,5 +35,5 @@ public class ViewFactory {
                 "Properties value not valid, only use 'fx', 'swing', 'text', using 'text' as default UI ");
         return new ViewImplementationText();
     }
-
+    
 }

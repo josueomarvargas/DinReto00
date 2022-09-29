@@ -11,6 +11,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
+
  * Clase que implementa la interfaz View que ejecutará una ventana usando JavaFX
  *
  * @author josue y henrique
