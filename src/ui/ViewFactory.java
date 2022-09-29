@@ -13,7 +13,7 @@ public class ViewFactory {
     
     public static View getView(String vType) {
         if (vType.equalsIgnoreCase("fx")) {
-            System.out.println("ui.ViewFactory.getView()");
+            //System.out.println("ui.ViewFactory.getView()");
             return new ViewImplementationFX();
         } else if (vType.equalsIgnoreCase("swing")) {
             return new ViewImplementationJSwing();

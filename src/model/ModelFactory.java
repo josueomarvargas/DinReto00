@@ -13,7 +13,12 @@ import java.util.ResourceBundle;
 public class ModelFactory {
 
      //private static final String MODEL_TYPE = ResourceBundle.getBundle("dinreto0.config").getString("model");
-
+/**
+ * Selecciona si queremos mostrar los fatos por fichero o base de Datos
+ * 
+ * @param mType
+ * @return 
+ */
         public static Model getModel(String mType) {
         if (mType.equalsIgnoreCase("mysql")) {
             return new ModelImplementationBD();
