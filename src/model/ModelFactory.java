@@ -26,7 +26,7 @@ public class ModelFactory {
         } else if (mType.equalsIgnoreCase("file")) {
             return new ModelImplementationFile();
         }
-        java.util.logging.Logger.getLogger(ModelFactory.class.getName()).log(Level.SEVERE, null,
+        java.util.logging.Logger.getLogger(ModelFactory.class.getName()).log(Level.WARNING,
                 "Properties model value not valid, only use 'mysql' and 'file', using file as default");
         return new ModelImplementationFile();
     }

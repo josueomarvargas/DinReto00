@@ -28,7 +28,6 @@ public class Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
         View view = ViewFactory.getView(VIEW_TYPE);
         Model model = ModelFactory.getModel(MODEL_TYPE);
 
