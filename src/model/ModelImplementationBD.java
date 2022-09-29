@@ -45,7 +45,6 @@ public class ModelImplementationBD implements Model {
             ResultSet rs = stmt.executeQuery("SELECT * FROM GREETING");
             while (rs.next()) {
                 saludo += rs.getString("saludo") + "\n";
-
             }
         } catch (SQLException ex) {
             Logger.getLogger(ModelImplementationBD.class.getName()).log(Level.SEVERE, null, ex);
