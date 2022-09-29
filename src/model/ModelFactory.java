@@ -4,28 +4,31 @@
  */
 package model;
 
-import java.util.ResourceBundle;
+import java.util.logging.Level;
 
 /**
+ * Clase que devuelve una instancia de una clase que implementa la interfaz
  *
- * @author yeguo
+ * @author josue y henrique
  */
-public class ModelFactory{
-     //private static final String MODEL_TYPE = ResourceBundle.getBundle("dinreto0.config").getString("model");
+public class ModelFactory {
 
-/**
- * Selecciona si queremos mostrar por fichero o base de Datos
- * 
- * @param
- * @return 
- */
-        public static Model getModel(String mType) {
+    /**
+     * Selecciona si queremos mostrar por fichero o base de Datos
+     *
+     * @param mType model type
+     * @return Instancia de la implementación dependiendo del valor que se
+     * encuentra en properties
+     */
+    public static Model getModel(String mType) {
         if (mType.equalsIgnoreCase("mysql")) {
             return new ModelImplementationBD();
-        }else {
-           // System.out.println(MODEL_TYPE);
+        } else if (mType.equalsIgnoreCase("file")) {
             return new ModelImplementationFile();
         }
+        java.util.logging.Logger.getLogger(ModelFactory.class.getName()).log(Level.SEVERE, null,
+                "Properties model value not valid, only use 'mysql' and 'file', using file as default");
+        return new ModelImplementationFile();
     }
-    
+
 }

@@ -5,48 +5,45 @@
 package ui;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
+ * Clase que implementa la interfaz View que ejecutará una ventana usando JavaFX
  *
- * @author josue
+ * @author josue y henrique
  */
 public class ViewImplementationFX extends Application implements View {
-       @Override
-    public void showGreeting(String text) {
 
-        
+    /**
+     * Este método que implementa la interfaz View le pasa el String al método
+     * {@code launch()} que ejecuta el programa
+     *
+     * @param text
+     */
+    @Override
+    public void showGreeting(String text) {
+        launch(text);
     }
-    
+
+    /**
+     * Este método es el que inicia la ventana JavaFX, el texto se inicializa
+     * con el valor recogido usando el método {@code getParameters()}
+     *
+     * @param primaryStage
+     */
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        String text= "hola";
-        
-        btn.setText(text);
-       
-        
-       
-        
-        Scene scene = new Scene(btn, 300, 250);
-        
+        Text txt = new Text(getParameters().getRaw().get(0));
+        StackPane root = new StackPane();
+        root.getChildren().add(txt);
+        Scene scene = new Scene(root, 300, 250);
+
         primaryStage.setTitle("DIN");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
-
- 
-    
 }

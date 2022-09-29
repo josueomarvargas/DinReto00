@@ -5,10 +5,11 @@
 package ui;
 
 /**
+ * Interfaz de la vista
  *
- * @author yeguo
+ * @author josue y henrique
  */
 public interface View {
-    
+
     public void showGreeting(String text);
 }

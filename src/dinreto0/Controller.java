@@ -8,13 +8,15 @@ import model.Model;
 import ui.View;
 
 /**
+ * Ejecutamos los métodos de las interfaces de vista y de modelo
  *
- * @author yeguo
+ * @author josue y henrique
+ *
  */
 public class Controller {
- //Ejecutamos la vista y el modelo 
-    public void run(View v, Model m){
+
+    public void run(View v, Model m) {
         v.showGreeting(m.getGreeting());
     }
-    
+
 }
