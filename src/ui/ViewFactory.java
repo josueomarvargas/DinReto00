@@ -17,7 +17,7 @@ public class ViewFactory {
      * Devuelve una vista dependiendo del valor que está en el archivo de
      * propiedades
      *
-     * @param vType
+     * @param vType Tipo de vista
      * @return view devuelve la vista
      */
     public static View getView(String vType) {

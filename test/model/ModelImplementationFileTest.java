@@ -8,30 +8,42 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
+ * Clase test para comprobar la implementación de la Fichero
  *
- * @author josue
+ * @author josue y henrique
  */
 public class ModelImplementationFileTest {
-    
+
+    /**
+     * Test para comprobar el constructor*
+     */
     @Test
     public void testConstructor() {
-        ModelImplementationFile modelo= new ModelImplementationFile();
-        assertNotNull("Fallo no se ha instanciado bien la clase",modelo);
-        
+        ModelImplementationFile modelo = new ModelImplementationFile();
+        assertNotNull("Fallo no se ha instanciado bien la clase", modelo);
+
     }
+
+    /**
+     * Test para comprobar que la clase es una instancia de la interfaz Modelo
+     */
     @Test
     public void testInterface() {
-         ModelImplementationFile modelo= new ModelImplementationFile();
-        
-        assertTrue("Esta clase no implementa la clase modelo",modelo instanceof Model);
-        
-        
+        ModelImplementationFile modelo = new ModelImplementationFile();
+
+        assertTrue("Esta clase no implementa la clase modelo", modelo instanceof Model);
+
     }
+
+    /**
+     * Test para comprobar el método que implementa la interfaz devuelve un
+     * valor
+     */
     @Test
     public void testGetGreeting() {
-          ModelImplementationFile modelo= new ModelImplementationFile();
-     
-        assertNotNull("No devuelve ningun String",modelo.getGreeting());
+        ModelImplementationFile modelo = new ModelImplementationFile();
+
+        assertNotNull("No devuelve ningun String", modelo.getGreeting());
     }
-    
+
 }

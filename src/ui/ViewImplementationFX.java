@@ -22,7 +22,7 @@ public class ViewImplementationFX extends Application implements View {
      * Este método que implementa la interfaz View le pasa el String al método
      * {@code launch()} que ejecuta el programa
      *
-     * @param text
+     * @param text Se le pasa el saludo al método
      */
     @Override
     public void showGreeting(String text) {
@@ -33,7 +33,7 @@ public class ViewImplementationFX extends Application implements View {
      * Este método es el que inicia la ventana JavaFX, el texto se inicializa
      * con el valor recogido usando el método {@code getParameters()}
      *
-     * @param primaryStage
+     * @param primaryStage Este parametro se crea automáticamente por JavaFX
      */
     @Override
     public void start(Stage primaryStage) {

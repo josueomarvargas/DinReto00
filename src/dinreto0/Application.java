@@ -12,6 +12,7 @@ import ui.View;
 import ui.ViewFactory;
 
 /**
+ * Clase main que ejecutará el programa
  *
  * @author josue y henrique
  */

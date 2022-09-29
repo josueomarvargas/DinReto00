@@ -87,7 +87,7 @@ public class ViewImplementationJSwing extends java.awt.Frame implements View {
      * Método que implementa la interfaz, lo que hace es establecer al JLabel el
      * valor que recibe por parámetros
      *
-     * @param text
+     * @param text Texto que se pasa por parámetros para cambiar el JLabel
      */
     @Override
     public void showGreeting(String text) {
