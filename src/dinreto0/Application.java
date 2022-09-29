@@ -16,7 +16,7 @@ import ui.ViewFactory;
  * @author 2dam
  */
 public class Application {
-
+//selecciona el modelo y la vista que vamos a utilizar, mediante el config-propeties
     private static final String VIEW_TYPE = ResourceBundle.getBundle("dinreto0.config").getString("view");
     private static final String MODEL_TYPE = ResourceBundle.getBundle("dinreto0.config").getString("model");
 
@@ -24,9 +24,10 @@ public class Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         View view = ViewFactory.getView(VIEW_TYPE);
         Model model = ModelFactory.getModel(MODEL_TYPE);
-
+//las opciones que hemos elegido lo mandamos al controlador
         Controller con = new Controller();
         con.run(view, model);
 

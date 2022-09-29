@@ -23,9 +23,12 @@ public class ModelImplementationFile implements Model {
         String greeting = "";
         try {
             //System.out.println("Working Directory = " + System.getProperty("user.dir"));
+            //Crea el fiichero, seleccionando el fichero que tenemos creado en el modelo
             File txt = new File("src/model/greeting.txt");
+            //Escanea el fichero
             Scanner reader = new Scanner(txt);
 
+            //recorre el fichero
             while (reader.hasNextLine()) {
                 greeting += reader.nextLine();
             }

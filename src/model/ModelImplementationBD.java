@@ -18,7 +18,9 @@ import java.util.logging.Logger;
  * @author yeguo
  */
 public class ModelImplementationBD implements Model {
-
+   /**
+    * Obtienes la Url, user y pass del  config-properties
+    */
     private static final String URL = ResourceBundle.getBundle("dinreto0.config").getString("url");
     private static final String USER = ResourceBundle.getBundle("dinreto0.config").getString("user");
     private static final String PASS = ResourceBundle.getBundle("dinreto0.config").getString("pass");

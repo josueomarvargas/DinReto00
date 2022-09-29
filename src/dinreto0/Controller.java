@@ -12,7 +12,7 @@ import ui.View;
  * @author yeguo
  */
 public class Controller {
- 
+ //Ejecutamos la vista y el modelo 
     public void run(View v, Model m){
         v.showGreeting(m.getGreeting());
     }
