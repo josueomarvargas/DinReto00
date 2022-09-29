@@ -5,12 +5,12 @@
 package model;
 
 /**
+ * Interfaz de modelo de datos
  *
- * @author yeguo
+ * @author josue y henrique
  */
 public interface Model {
 
     public String getGreeting();
 
-    
 }
