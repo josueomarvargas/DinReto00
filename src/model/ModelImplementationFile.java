@@ -24,15 +24,14 @@ public class ModelImplementationFile implements Model {
         try {
             //System.out.println("Working Directory = " + System.getProperty("user.dir"));
             //Crea el fiichero, seleccionando el fichero que tenemos creado en el modelo
-            File txt = new File("src/model/greeting.txt");
             //Escanea el fichero
-            Scanner reader = new Scanner(txt);
+            Scanner reader = new Scanner(getClass().getResourceAsStream("greeting.txt"));
 
             //recorre el fichero
             while (reader.hasNextLine()) {
                 greeting += reader.nextLine();
             }
-        } catch (FileNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(ModelImplementationFile.class.getName()).log(Level.SEVERE, null, ex);
         }
         return greeting;
